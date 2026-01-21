@@ -1,0 +1,655 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    text-decoration: none;
+    border: none;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--letra-normal);
+    
+}
+
+:root {
+    --letra-normal: "Open Sans", sans-serif;
+    --letra-pacifico: "Pacifico", cursive;
+    --azul-marino: #223B55;
+    --negro: #191919;
+    --crema: #F2D6AD;
+    --marron: #7F592D;
+    --claro: #EBE6DA;
+    --oliva: #555E2B;
+    --azul-claro: #AFCCD4;
+    --azul-aqua: #006363;
+}
+
+body {
+    font-size: 1.6rem;
+ 
+}
+
+/*UTILIDADES*/
+
+.heading {
+    text-align: center;
+    font-family: var(--letra-pacifico);
+    color: #FFAD36;
+
+    font-size: 4rem;
+    font-weight: 800;
+
+
+}
+
+.heading-2 {
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    margin: 1rem 0 1rem 0;
+}
+
+.title {
+    font-family: var(--letra-pacifico);
+    text-align: center;
+
+}
+
+.contain{
+    max-width: 100rem;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+
+
+.btn {
+    background-color: var(--oliva);
+    padding: 1.4rem 3rem;
+    border-radius: .5rem;
+    color: white;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition-duration: 2s ease;
+
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/*PAGINA PRINCIPAL*/
+
+.home {}
+
+header {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+@media(max-width: 992px){
+    header{
+        height: 100%;
+    }
+}
+
+.logo {
+    margin: 3rem 0;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    padding: 2.5rem 0;
+}
+
+
+
+nav a {
+    color: rgb(255, 255, 255);
+    font-size: 2.1rem;
+    font-weight: 700;
+}
+
+@media(max-width: 768px){
+    
+    nav{
+        padding: 2rem 0;
+    }
+
+    nav a{
+        font-size: 1.5rem;
+    }
+}
+
+a:hover {
+    color: #FFAD36;
+} 
+
+
+.div-home {
+    margin: 4rem;
+}
+
+@media(max-width: 500px){
+   .welcome{
+    display: flex;
+    justify-content: center;
+   }
+
+   .div-home{
+    display: flex;
+    justify-content: center;
+   }
+
+}
+
+
+video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+
+.content {
+    background-color: #ffffff;
+    border-radius: 2rem 2rem 0 0;
+    padding: 2rem;
+    text-align: center;
+    max-width: 35rem;
+    margin-top: 3rem;
+    margin-left: 6rem;
+    color: rgb(0, 0, 0);
+    border: .1rem solid black;
+
+}
+
+@media(max-width: 500px){
+    .content{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.content h3,
+h2 {
+    margin-bottom: .7rem;
+
+}
+
+.content p {
+    margin-bottom: 4rem;
+
+}
+
+.content .button {
+    margin-bottom: -4rem;
+}
+
+
+/*MENU*/
+.menu {
+    background-color: #F4F1E8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu h1 {
+    text-align: center;
+    font-family: var(--letra-pacifico);
+    font-size: 4.5rem;
+    margin-top: 3rem;
+}
+
+.container-card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    /*PARA QUE EL DISEÑO SEA MAS RESPONSIVO*/
+    /*auto-fit intenta llenar el contenedor con la mayor cantidad 
+    de columnas posibles, siempre y cuando: Cada columna cumpla el 
+    tamaño mínimo (30rem*/
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    background-color: #006363;
+    padding: 3rem;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.card-items {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    gap: 1rem;
+    border-radius: 6rem .5rem 0 0;
+}
+
+.card-items:hover {
+    background-color: var(--negro);
+    color: white;
+
+}
+
+.card-items img {
+    width: 60%;
+    height: 60%;
+    border-radius: 2rem;
+    border: .2rem solid rgb(255, 255, 255);
+}
+
+.card-items button {
+    padding: 1rem;
+    background-color: var(--oliva);
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition-duration: 2s ease;
+    font-weight: bold;
+}
+
+.card-items button:hover {
+    transform: scale(1.1);
+    background-color: white;
+    color: black;
+}
+
+/*PROMOCION*/
+ .promocion{
+    background-image: url(../cafeteria-recursos/images/bg-img2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: auto;
+    padding: 6rem 3rem;
+    
+  }
+
+  @media(max-width:1200px){
+    .promocion{
+        padding: 1rem;
+    }
+  }
+
+  @media(max-width: 600px){
+    .promocion{
+        padding: 3rem;
+    }
+  }
+
+  .container-promo img {
+  width: 100%;
+  height: auto; /* mantiene proporción */
+
+}
+
+  picture , picture img{
+    border-radius: .5rem;
+    object-fit: cover;
+  }
+
+  .container-promo{
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   
+    
+  }
+
+
+  .descripcion-promo{
+    position: absolute;
+    right: 0;
+    width: 45%;
+    margin-right: 1.5rem;
+    text-align: center;
+
+  }
+
+  @media(max-width:1200px){
+    .descripcion-promo{
+        bottom: 7rem;
+        right:auto ;
+    }
+  }
+
+  @media(max-width: 560px){
+    .descripcion-promo{
+        bottom: 3rem;
+        right:auto ;
+        width: 80%;
+    }
+  }
+
+  .descripcion-promo h2 {
+    margin-bottom: 1rem;
+    font-family: "Pacifico", cursive;
+    font-size: 3.5rem;
+}
+
+.descripcion-promo p {
+    font-size: 2rem;
+}
+
+@media(max-width:1200px){
+    .descripcion-promo h2{
+        font-size: 3rem;
+    }
+
+    .descripcion-promo p{
+        font-size: 1.6rem;
+    }
+}
+
+@media(max-width: 560px){
+    .descripcion-promo h2{
+        font-size: 2.1rem;
+    }
+
+    .descripcion-promo p{
+        font-size: 1.2rem;
+    }
+}
+  .descripcion-promo button {
+    padding: 1.5rem;
+    background-color: #3F2312;
+    color: white;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+@media(max-width:560px){
+    .descripcion-promo button{
+        padding: 1.3rem;
+        font-size: 1.1rem;
+    }
+}
+
+.descripcion-promo button:hover {
+    background-color: white;
+    color: #3F2312;
+}
+
+/*SECCION DE MENU 2*/
+
+.menu-2 {
+    background-color: #006363;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-direction: column;
+
+}
+
+.menu-2 h2 {
+    font-family: "pacifico", cursive;
+    font-size: 3rem;
+    color: white;
+    margin-top: 2rem;
+}
+
+.container-menu2 {
+    display: grid;
+    width: 55%;
+    padding: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+    color: white;
+    border: 1rem double white;
+    gap: 3rem;
+}
+
+.Bebida h2,
+.comida h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: var(--letra-normal);
+
+}
+
+
+.items-bebida,
+.items-comida {
+    border-bottom: .2rem dotted white;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template: 1fr 1fr / 6fr 1fr;
+    gap: 0 2rem;
+}
+
+.descripcion {
+    grid-column: span 2;
+    font-size: 1.5rem;
+}
+
+.items-comida {
+    border-bottom: .2rem dotted white;
+    margin-bottom: 2rem;
+}
+
+
+
+.items-bebida h3,
+p {
+    margin-bottom: 1.3rem;
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+
+.items-comida h3,
+p {
+    margin-bottom: 1.3rem;
+    font-size: 1.9rem;
+}
+
+
+/*GALERIA DE IMAGENES*/
+
+.galeria {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    background-color: rgba(0, 0, 0, 0.329);
+     
+
+}
+
+
+
+.galeria img {
+    transition-duration: 5s ease;
+    width: 100%;
+    height: auto;
+    opacity: 0.4;
+}
+
+.galeria img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    z-index: 100;
+}
+
+/*UBICACION Y HORARIOS*/
+
+.location {
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.location h1 {
+    font-family: var(--letra-pacifico);
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.info-location {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    margin-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+ul.Ubicacion li {
+    list-style: none;
+}
+
+address {
+    font-style: normal;
+}
+
+.address,
+.horario {
+    padding: 2rem;
+}
+
+.address h2,
+.horario h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+
+}
+
+.address p a,
+.horario li {
+    font-weight: 500;
+    color: black;
+    font-size: 1.8rem;
+    ;
+}
+
+.address p {
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+.maps {
+    width: 100%;
+    height: 60rem;
+}
+
+/*FOOTER*/
+
+footer { 
+    background-color: #191919;
+    padding: 2rem 6rem;
+}
+
+@media(max-width: 455px){
+    footer{
+        padding: 2rem;
+    }
+}
+
+.container-footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+    place-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.logo h1 {
+    font-family: var(--letra-pacifico);
+    color: #FFAD36;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.logo h2  {
+    text-align: center;
+    color: white;
+}
+
+.redes-sociales{
+    display: flex;
+    justify-content: center;
+    gap: .8rem; 
+    width: 90%;
+}
+
+.redes-sociales a I{
+   color: #FFAD36; 
+}
+
+.redes-sociales a{
+    padding: 1rem;
+    border-radius: 50%;
+    border: .2rem solid #FFAD36;
+}
+
+.redes-sociales a i:hover {
+    color: rgb(255, 255, 255); 
+}
+
+.redes-sociales a:hover{
+     border: .2rem solid #ffffff;
+}
+
+
+.footer a, footer h2{
+    color: rgb(252, 252, 252);
+   text-align: center; 
+}
+
+footer .about li , .aviso li {
+   list-style: none;
+   padding-left: 1.5rem;
+   font-weight: 500;
+}
+
+footer  p{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+
+.about ul li a:hover, .aviso ul li a:hover {
+   text-decoration: underline;
+   color: #FFAD36;
+}
+
+
+
+/* CUAL ES LA FORMA MAS PROFESIONAL DE HACER QUE EL DISEÑO SEA RESPONSIVO
+USANDO LA MEDIA QUERI O grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+Y OTRA COSA SI QUIERO EVITAR EL DESBORDAMIENTO CON AUTO-FIT COMO LO PODRIA HACER */
