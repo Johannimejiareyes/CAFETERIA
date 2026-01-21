@@ -648,8 +648,14 @@ footer  p{
    color: #FFAD36;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 
 
 /* CUAL ES LA FORMA MAS PROFESIONAL DE HACER QUE EL DISEÑO SEA RESPONSIVO
 USANDO LA MEDIA QUERI O grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
 Y OTRA COSA SI QUIERO EVITAR EL DESBORDAMIENTO CON AUTO-FIT COMO LO PODRIA HACER */
